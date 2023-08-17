@@ -1,4 +1,5 @@
 #include <stdarg.h>
+#include "variadic_functions.h"
 
 /**
  * sum_variadic - Calculate the sum of a variable number of arguments.
