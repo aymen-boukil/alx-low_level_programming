@@ -2,11 +2,15 @@
 #include <stdarg.h>
 #include "variadic_functions.h"
 
+/**
+ * print_all - Prints any data type followed by a new line.
+ * @format: A list of types of arguments passed to the function.
+ */
 void print_all(const char * const format, ...)
 {
 	va_list args;
 	unsigned int i = 0;
-	char *sep = "";
+	const char *sep = "";
 
 	va_start(args, format);
 	while (format && format[i])
@@ -23,11 +27,10 @@ void print_all(const char * const format, ...)
 				printf("%s%f", sep, va_arg(args, double));
 				break;
 			case 's':
-				printf("%s", sep);
 				{
 					char *str = va_arg(args, char *);
 					str = (str == NULL) ? "(nil)" : str;
-					printf("%s", str);
+					printf("%s%s", sep, str);
 				}
 				break;
 		}
