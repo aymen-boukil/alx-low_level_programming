@@ -1,5 +1,5 @@
 #include <stdarg.h>
-#include "variadic_functions.h"
+#include "variadic_functions.hi"
 
 /**
  * sum_variadic - Calculate the sum of a variable number of arguments.
@@ -8,7 +8,7 @@
  *
  * Return: The sum of the variadic arguments.
  */
-int sum_variadic(int n, ...)
+int sum_them_all(int n, ...)
 {
     va_list args;
     int sum = 0;
