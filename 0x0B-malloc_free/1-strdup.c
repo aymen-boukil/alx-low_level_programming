@@ -14,7 +14,7 @@ char *_strdup(char *str)
 	int i;
 
 	if (str == NULL)
-		return NULL;
+		return (NULL);
 
 	/* Calculate the length of the string */
 	while (str[length])
@@ -24,7 +24,7 @@ char *_strdup(char *str)
 	duplicate = (char *)malloc((length + 1) * sizeof(char));
 
 	if (duplicate == NULL)
-		return NULL;
+		return (NULL);
 
 	/* Copy the original string to the duplicate */
 	for (i = 0; i < length; i++)
@@ -33,6 +33,6 @@ char *_strdup(char *str)
 	/* Null-terminate the duplicate string */
 	duplicate[length] = '\0';
 
-	return duplicate;
+	return (duplicate);
 }
 
